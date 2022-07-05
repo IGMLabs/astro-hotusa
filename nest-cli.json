@@ -1,0 +1,66 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/astro-hotusa/src",
+  "monorepo": true,
+  "root": "apps/astro-hotusa",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/astro-hotusa/tsconfig.app.json"
+  },
+  "projects": {
+    "astro-hotusa": {
+      "type": "application",
+      "root": "apps/astro-hotusa",
+      "entryFile": "main",
+      "sourceRoot": "apps/astro-hotusa/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/astro-hotusa/tsconfig.app.json"
+      }
+    },
+    "trips-mongo": {
+      "type": "application",
+      "root": "apps/trips-mongo",
+      "entryFile": "main",
+      "sourceRoot": "apps/trips-mongo/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/trips-mongo/tsconfig.app.json"
+      }
+    },
+    "bookings-sql": {
+      "type": "application",
+      "root": "apps/bookings-sql",
+      "entryFile": "main",
+      "sourceRoot": "apps/bookings-sql/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bookings-sql/tsconfig.app.json"
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    },
+    "auth": {
+      "type": "application",
+      "root": "apps/auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    },
+    "monitor": {
+      "type": "library",
+      "root": "libs/monitor",
+      "entryFile": "index",
+      "sourceRoot": "libs/monitor/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/monitor/tsconfig.lib.json"
+      }
+    }
+  }
+}
